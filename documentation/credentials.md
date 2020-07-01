@@ -50,12 +50,12 @@ let client = AWSClient(credentialProvider: .empty)
 
 ## Selector Credential Providers
 
-You can supply a list of credential providers you would like your `AWSClient` to use with the `.selector` credential provider. Each provider in the list is tested, until it finds a provider that successfully provides credentials. The following would test if can find credentials using environment variables, and then in the shared config file `~/.aws/credentials`.
+You can supply a list of credential providers you would like your `AWSClient` to use with the `.selector` credential provider. Each provider in the list is tested, until it finds a provider that successfully provides credentials. The following would test if credentials are available via environment variables, and then in the shared config file `~/.aws/credentials`.
 ```swift
 let client = AWSClient(credentialProvider: .selector(.environment, .configfile))
 ```
 
-The default credential provider is implemented as a selector.
+The default credential provider is implemented as a selector as follows.
 ```swift
 .selector(.environment, .ecs, .ec2, .configfile)
 ```
