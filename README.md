@@ -52,7 +52,7 @@ Before using the SDK, you will need AWS credentials to sign all your requests. C
 - Shared credentials file in your home directory
 - Static credentials provided at runtime
 
-You can find out more about credential providers [here](configuration/credentials.md)
+You can find out more about credential providers [here](documentation/credentials.md)
 
 ## Using AWSSDKSwift
 
